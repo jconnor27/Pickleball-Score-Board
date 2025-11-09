@@ -420,7 +420,7 @@ html {
     .settingsPopUpContainer {
         width: 95vw;
         margin-left: -1vw;
-        /*background-color: red;*/
+        background-color: blue;
     }
 
     .settingsPlayToNumbox {
