@@ -327,6 +327,8 @@ async function mainEvent() {
 
         if (settingsPlayToNumbox.value == "") {
             settingsPlayToNumbox.value = 11;
+        } else if (settingsPlayToNumbox.value == "0") {
+            settingsPlayToNumbox.value = 11;
         }
     })
 
