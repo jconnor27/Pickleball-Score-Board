@@ -1,5 +1,4 @@
 async function mainEvent() {
-
     /** Winner Pop Up Buttons and Fields */
     const winnerPopUpContainer = document.querySelector("#winnerPopUpContainer");
     const winnerPopUpInput = document.querySelector("#winnerPopUpInput");
@@ -14,6 +13,8 @@ async function mainEvent() {
     const settingsPlayToNumbox = document.querySelector("#settingsPlayToNumbox");
     const settingsSaveButton = document.querySelector("#settingsSaveButton");
     const settingsPopUpContainer = document.querySelector("#settingsPopUpContainer");
+    const settingsChromeButton = document.querySelector("#settingsChromeButton");
+    const settingsSafariButton = document.querySelector("#settingsSafariButton");
 
     /** Main Display Buttons and Fields */
 
@@ -42,6 +43,7 @@ async function mainEvent() {
     /** Intance Variables */
     let maxScore = 11;
     let gameOver = true;
+    let browser = "CHROME";
 
     /** Functions */
     function displayGameOver(teamName, winnerScore, loserScore) {
@@ -259,6 +261,13 @@ async function mainEvent() {
         settingsTeamNameTextboxOne.value = teamNameContainerOne.innerHTML;
         settingsTeamNameTextboxTwo.value = teamNameContainerTwo.innerHTML;
         settingsPlayToNumbox.value = maxScore;
+        if (browser == "CHROME") {
+            settingsChromeButton.classList.add("activeButton");
+            settingsSafariButton.classList.remove("activeButton");
+        } else {
+            settingsChromeButton.classList.remove("activeButton");
+            settingsSafariButton.classList.add("activeButton");
+        }
         settingsPopUpContainer.classList.add("hidden");
     })
 
@@ -278,8 +287,35 @@ async function mainEvent() {
         // Setting / Changing Max Score
         maxScore = settingsPlayToNumbox.value;
 
+        // Checking Browser Settings
+        if (settingsChromeButton.classList.contains("activeButton")) {
+            browser = "CHROME";
+            teamOneScoreDownButton.classList.remove("triangleDownSafari");
+            teamOneScoreUpButton.classList.remove("triangleUpSafari");
+            teamTwoScoreDownButton.classList.remove("triangleDownSafari");
+            teamTwoScoreUpButton.classList.remove("triangleUpSafari");
+        } else {
+            browser = "SAFARI";
+            teamOneScoreDownButton.classList.add("triangleDownSafari");
+            teamOneScoreUpButton.classList.add("triangleUpSafari");
+            teamTwoScoreDownButton.classList.add("triangleDownSafari");
+            teamTwoScoreUpButton.classList.add("triangleUpSafari");
+        }
         // Hiding Settings Pop Up
         settingsPopUpContainer.classList.add("hidden");
+    })
+
+    settingsChromeButton.addEventListener("click", (event) => {
+        console.log("Fired - settingsChromeButton clicked");
+
+        settingsSafariButton.classList.remove("activeButton");
+        settingsChromeButton.classList.add("activeButton");
+    })
+    settingsSafariButton.addEventListener("click", (event) => {
+        console.log("Fired - settingsSafariButton clicked");
+
+        settingsSafariButton.classList.add("activeButton");
+        settingsChromeButton.classList.remove("activeButton");
     })
 
     /** Selects All When Entering Textbox */
