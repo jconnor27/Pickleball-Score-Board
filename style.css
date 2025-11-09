@@ -16,30 +16,335 @@ html {
   
   body {
     margin: 0;
-    padding: 0;
+    padding: 10px;
   
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
       ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    background-color: white;
+    background-color: black;
     max-height: 1920px;
+    
   }
 
   .topWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: white;
+    z-index: 1;
   }
 
   .upperContainer {
     display: flex;
-    flex-direction: column;
-    height: .75vh;
+    flex-direction: row;
+    height: 75vh;
   }
 
   .lowerContainer {
     display: flex;
-    flex-direction: column;
-    height: .25vh;
+    flex-direction: row;
+    height: 25vh;
     border-top: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    gap: 4vw;
   }
+
+  .upperScoreContainer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    min-width: 49vw;
+    align-items: center;
+  }
+
+  .teamNameContainer {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color:white;
+    background-color: black;
+    min-width: 49vw;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    min-width: 49vw;
+    justify-content: center;
+    background-color: rgb(84, 162, 245);
+
+    border: 2px solid black;
+}
+
+.scoreWrapper {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border: 2px solid black;
+    border-radius: 6rem;
+    height: 30vh;
+    padding: 1rem;
+    padding-bottom: 4rem;
+    font-size: 30vh;
+    background-color: white;
+}
+
+.servingDotContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 49vw;
+    gap: 5vw;
+    background-color: rgb(84, 162, 245);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.servingDot {
+    min-height: 7vh;
+    min-width: 7vh;
+    border: 2px solid black;
+    border-radius: 5rem;
+    background-color: white;
+}
+
+.triangleDownBorder {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 80px solid red;
+    border-block-color: white;
+    position: relative;
+}
+
+.triangleDown {
+    width: 0;
+    height: 0;
+    border-left: 53px solid transparent;
+    border-right: 53px solid transparent;
+    border-top: 73px solid red;
+    position: absolute;
+    align-self: last baseline;
+    justify-self: center;
+    padding-bottom: .25rem;
+}
+
+.triangleUp {
+    width: 0;
+    height: 0;
+    border-left: 53px solid transparent;
+    border-right: 53px solid transparent;
+    border-bottom: 73px solid green;
+    position: absolute;
+    align-self: baseline;
+    justify-self: center;
+    padding-top: .25rem;
+}
+
+.triangleUpBorder {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 80px solid green;
+    border-block-color: white;
+    position: relative;
+}
+
+.resetSettingsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    gap: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.lowerSectionButton {
+    border: 2px solid black;
+    font-size: xx-large;
+    padding: .5rem;
+    width: fit-content;
+    background-color: white;
+}
+
+.settingsPopUpContainer {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    width: 60vw;
+    height: 40vh;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 1;
+    margin-top: -70vh;
+    position: relative;
+}
+
+.winnerPopUpContainer {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 30vh;
+    background-color: white;
+    border: 2px solid black;
+    z-index: 1;
+    margin-top: -70vh;
+    position: relative;
+}
+
+.winnerPopUpTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.winnerPopUpHeader {
+    font-size: xx-large;
+    color:rgb(23, 167, 23);
+    font-weight: bold;
+}
+
+.winnerPopUpInput {
+    font-size: xx-large;
+}
+
+.winnerPopUpScore {
+    font-size: x-large;
+}
+
+.closeButton {
+    display: flex;
+    width: 5vw;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: 3vh;
+    background-color: rgb(228, 225, 225);
+}
+
+.xButton {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    align-self: flex-end;
+    margin-top: .1rem;
+    margin-right: .1rem;
+    border: 1px solid black;
+    border-radius: .5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsHeader {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.labelsInputsContainer {
+    display: flex;
+    float: row;
+}
+
+.settingsLablesContainer {
+    display: flex;
+    flex-direction: column;
+    width: 58vw;
+    
+}
+
+.settingsInputsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 58vw;
+}
+
+.settingsLable {
+    font-size: x-large;
+    height: 4vh;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    margin-right: 4vw;
+    margin-top: 3vh;
+}
+
+.settingsTeamNameTextbox {
+    display: flex;
+    border: 2px solid black;
+    padding-left: 1vw;
+    font-size: large;
+    height: 4vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+    width: 25vw;
+}
+
+.settingsPlayToNumbox {
+    display: flex;
+    border: 2px solid black;
+    padding-left: .75vw;
+    font-size: large;
+    height: 4vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+    width: 3vw;
+}
+
+.saveButton {
+    display: flex;
+    width: 5vw;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: 3vh;
+    background-color: rgb(19, 236, 19);
+}
+
+.hidden {
+    display: none;
+}
+
+.activeServingDot {
+    background-color: yellow;
+}
+
+.winner {
+    border-color: rgb(139, 219, 78);
+    border-width: 20px;
+    /*background-color: rgb(139, 219, 78);*/
+}

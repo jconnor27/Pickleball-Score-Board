@@ -12,15 +12,107 @@
 
             <!-- Container for upper (score) part -->
             <div class="upperContainer">
-                
+
+                <!-- Left Side Score -->
+                <div class="upperScoreContainer">
+
+                    <!-- Team 1 Name Container -->
+                    <div class="teamNameContainer" id="teamNameContainerOne">
+                        Team 1
+                    </div>
+                    <!-- Team 1 Score Container -->
+                    <div class="scoreContainer" id="teamOneScoreContainer">
+                        <div class="scoreWrapper" id="scoreWrapperOne">
+                            0
+                        </div>
+                    </div>
+                    <!-- Team 1 Serving Dot Container -->
+                    <div class="servingDotContainer">
+                        <div class="servingDot" id="leftServingDotOne"></div>
+                        <div class="servingDot" id="leftServingDotTwo"></div>
+                    </div>
+                </div>
+                <!-- Right Side Score -->
+                 <div class="upperScoreContainer">
+                    <!-- Team 2 Name Container -->
+                    <div class="teamNameContainer" id="teamNameContainerTwo">
+                        Team 2
+                    </div>
+                    <!-- Team 2 Score Container -->
+                    <div class="scoreContainer" id="teamTwoScoreContainer">
+                        <div class="scoreWrapper" id="scoreWrapperTwo">
+                            0
+                        </div>
+                    </div>
+                    <!-- Team 2 Serving Dot Container -->
+                    <div class="servingDotContainer">
+                        <div class="servingDot" id="rightServingDotOne"></div>
+                        <div class="servingDot" id="rightServingDotTwo"></div>
+                    </div>
+                 </div>
             </div>
 
             <!-- Container for lower (buttons) part -->
             <div class="lowerContainer">
-
+                <div class="triangleDownBorder">
+                    <div class="triangleDown" id="teamOneScoreDownButton"></div>
+                </div>
+                <div class="triangleUpBorder">
+                    <div class="triangleUp" id="teamOneScoreUpButton"></div>
+                </div>
+                <div class="resetSettingsContainer">
+                    <div class="lowerSectionButton" id="resetStartButton">START</div>
+                    <div class="lowerSectionButton" id="settingsButton">SETTINGS</div>
+                </div>
+                <div class="triangleDownBorder">
+                    <div class="triangleDown" id="teamTwoScoreDownButton"></div>
+                </div>
+                <div class="triangleUpBorder">
+                    <div class="triangleUp" id="teamTwoScoreUpButton"></div>
+                </div>
             </div>
         </div>
 
-        <script src="./script.js"></script>
+        <!-- Settings Pop Up Container -->
+        <div class="settingsPopUpContainer hidden" id="settingsPopUpContainer">
+
+            <!-- X Button -->
+            <button class="xButton" id="settingsPopUpXButton">X</button>
+            <!-- Header -->
+            <div class="settingsHeader">SETTINGS</div>
+
+            <!-- Using this to separate inputs from labels so I can align them easier -->
+            <div class="labelsInputsContainer">
+
+                <!-- Labels Container-->
+                <div class="settingsLablesContainer">
+                    <div class="settingsLable">Team 1 Name:</div>
+                    <div class="settingsLable">Team 2 Name:</div>
+                    <div class="settingsLable">Playing To:</div>
+                </div>
+
+                <!-- Input Container -->
+                <div class="settingsInputsContainer">
+                    <input type="text" class="settingsTeamNameTextbox" id="settingsTeamNameTextboxOne" value="Team 1">
+                    <input type="text" class="settingsTeamNameTextbox" id="settingsTeamNameTextboxTwo" value="Team 2">
+                    <input type="number" class="settingsPlayToNumbox" id="settingsPlayToNumbox" value="11">
+                </div>
+            </div>
+            
+            <!-- Save Button -->
+            <button class="saveButton" id="settingsSaveButton">SAVE</button>
+        </div>
+
+        <!-- Winner Pop Up Container -->
+        <div class="winnerPopUpContainer hidden" id="winnerPopUpContainer">
+            <button class="xButton" id="winnerPopUpXButton">X</button>
+            <div class="winnerPopUpTextContainer">
+                <div class="winnerPopUpHeader">CONGRATULATIONS!!!</div>
+                <div class="winnerPopUpInput" id="winnerPopUpInput">Testing</div>
+                <div class="winnerPopUpScore" id="winnerPopUpScore">Testing</div>
+            </div>
+            <button class="closeButton" id="winnerPopUpCloseButton">CLOSE</button>
+        </div>
+
     </body>
 </html>
