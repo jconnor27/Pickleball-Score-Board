@@ -419,6 +419,7 @@ html {
 
     .settingsPopUpContainer {
         width: 90vw;
+        margin-left: -2vw;
     }
 
     .settingsPlayToNumbox {
@@ -432,6 +433,7 @@ html {
     .winnerPopUpContainer {
         width: 90vw;
         height: 35vh;
+        margin-left: -2vw;
     }
 
     .scoreWrapper {
