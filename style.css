@@ -396,3 +396,24 @@ html {
 .disabled {
     background-color: rgb(180, 174, 174);
 }
+
+.arrowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1370px) {
+    .arrowContainer {
+        flex-direction: column-reverse;
+        gap: 2vh;
+    }
+
+    .lowerSectionButton {
+        font-size: large;
+    }
+
+    .body {
+        display: flex;
+        width: 100vw;
+    }
+}
