@@ -402,7 +402,7 @@ html {
     flex-direction: row;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 200px) {
     .arrowContainer {
         flex-direction: column-reverse;
         gap: 2vh;
@@ -419,6 +419,7 @@ html {
 
     .settingsPopUpContainer {
         width: 90vw;
+        background-color: red;
     }
 
     .settingsPlayToNumbox {
