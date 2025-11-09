@@ -51,7 +51,7 @@ async function mainEvent() {
             ", winnerScore = " + winnerScore + ",loserScore = " + loserScore + ")");
 
         winnerPopUpContainer.classList.remove("hidden");
-        winnerPopUpInput.innerHTML = teamName + " is the Winner!!!"
+        winnerPopUpInput.innerHTML = teamName;
         winnerPopUpScore.innerHTML = "Final Score: " + winnerScore + " - " + loserScore;
         
     }
@@ -297,12 +297,18 @@ async function mainEvent() {
             teamOneScoreUpButton.classList.remove("triangleUpSafari");
             teamTwoScoreDownButton.classList.remove("triangleDownSafari");
             teamTwoScoreUpButton.classList.remove("triangleUpSafari");
+            settingsPopUpContainer.classList.remove("settingsPopUpContainerSafari");
+            winnerPopUpContainer.classList.remove("winnerPopUpContainerSafari");
+            winnerPopUpCloseButton.classList.remove("closeButtonSafari");
         } else {
             browser = "SAFARI";
             teamOneScoreDownButton.classList.add("triangleDownSafari");
             teamOneScoreUpButton.classList.add("triangleUpSafari");
             teamTwoScoreDownButton.classList.add("triangleDownSafari");
             teamTwoScoreUpButton.classList.add("triangleUpSafari");
+            settingsPopUpContainer.classList.add("settingsPopUpContainerSafari");
+            winnerPopUpContainer.classList.add("winnerPopUpContainerSafari");
+            winnerPopUpCloseButton.classList.add("closeButtonSafari");
         }
         // Hiding Settings Pop Up
         settingsPopUpContainer.classList.add("hidden");
