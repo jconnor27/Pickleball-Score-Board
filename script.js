@@ -220,31 +220,31 @@ async function mainEvent() {
     resetStartButton.addEventListener("click", (event) => {
         console.log("Fired - resetStartButton clicked");
 
-        console.log("hiya");
-        console.log(resetStartButton.innerHTML.localeCompare("START"));
-        if (resetStartButton.innerHTML.toString().localeCompare("START") == 0) {
-            console.log("ent top");
-            gameOver = false;
-            resetStartButton.innerHTML = "RESTART"
-        } else {
-            console.log("ent bottom");
-
-            scoreWrapperOne.innerHTML = "0";
-            scoreWrapperOne.classList.remove("winner");
-
-            scoreWrapperTwo.innerHTML = "0";
-            scoreWrapperTwo.classList.remove("winner");
+        if (settingsPopUpContainer.classList.contains("hidden") 
+            || winnerPopUpContainer.classList.contains("hidden")) {
+            if (resetStartButton.innerHTML.toString().localeCompare("START") == 0) {
+                console.log("ent top");
+                gameOver = false;
+                resetStartButton.innerHTML = "RESTART"
+            } else {
+                console.log("ent bottom");
     
-            leftServingDotOne.classList.remove("activeServingDot");
-            leftServingDotTwo.classList.remove("activeServingDot");
-            
-            rightServingDotOne.classList.remove("activeServingDot");
-            rightServingDotTwo.classList.remove("activeServingDot");
-
-            resetStartButton.innerHTML = "START"
-            gameOver = true;
-        }
+                scoreWrapperOne.innerHTML = "0";
+                scoreWrapperOne.classList.remove("winner");
+    
+                scoreWrapperTwo.innerHTML = "0";
+                scoreWrapperTwo.classList.remove("winner");
         
+                leftServingDotOne.classList.remove("activeServingDot");
+                leftServingDotTwo.classList.remove("activeServingDot");
+                
+                rightServingDotOne.classList.remove("activeServingDot");
+                rightServingDotTwo.classList.remove("activeServingDot");
+    
+                resetStartButton.innerHTML = "START"
+                gameOver = true;
+            }
+        }
     })
 
     settingsButton.addEventListener("click", (event) => {

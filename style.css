@@ -402,7 +402,7 @@ html {
     flex-direction: row;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 600px) {
     .arrowContainer {
         flex-direction: column-reverse;
         gap: 2vh;
@@ -415,5 +415,45 @@ html {
     .body {
         display: flex;
         width: 100vw;
+    }
+
+    .settingsPopUpContainer {
+        width: 90vw;
+    }
+
+    .settingsPlayToNumbox {
+        width: 8vw;;
+    }
+
+    .settingsTeamNameTextbox {
+        width: 40vw;
+    }
+
+    .winnerPopUpContainer {
+        width: 90vw;
+        height: 35vh;
+    }
+
+    .scoreWrapper {
+        font-size: 15vh;
+        max-height: 20vh;
+
+    }
+
+    .winnerPopUpHeader {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        margin-left: 50vw;
+    }
+
+    .winnerPopUpInput {
+        min-width: 90vw;
+        margin-left: 90vw;
+    }
+
+    .winnerPopUpScore {
+        min-width: 90vw;
+        margin-left: 90vw;
     }
 }
