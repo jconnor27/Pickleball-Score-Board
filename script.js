@@ -256,6 +256,9 @@ async function mainEvent() {
     settingsPopUpXButton.addEventListener("click", (event) => {
         console.log("Fired - settingsPopUpXButton clicked");
 
+        settingsTeamNameTextboxOne.value = teamNameContainerOne.innerHTML;
+        settingsTeamNameTextboxTwo.value = teamNameContainerTwo.innerHTML;
+        settingsPlayToNumbox.value = maxScore;
         settingsPopUpContainer.classList.add("hidden");
     })
 
