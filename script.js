@@ -43,7 +43,9 @@ async function mainEvent() {
     /** Intance Variables */
     let maxScore = 11;
     let gameOver = true;
-    let browser = "CHROME";
+    let browser = "SAFARI";
+
+    //onload(settingsSaveButton.click());
 
     /** Functions */
     function displayGameOver(teamName, winnerScore, loserScore) {
