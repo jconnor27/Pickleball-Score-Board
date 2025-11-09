@@ -375,3 +375,7 @@ html {
     border-width: 20px;
     /*background-color: rgb(139, 219, 78);*/
 }
+
+.disabled {
+    background-color: rgb(180, 174, 174);
+}

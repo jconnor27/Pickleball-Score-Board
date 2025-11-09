@@ -251,6 +251,8 @@ async function mainEvent() {
         console.log("Fired - settingsButton clicked");
 
         settingsPopUpContainer.classList.remove("hidden");
+        settingsButton.disabled = true;
+        settingsButton.classList.add("disabled");
     })
 
 
@@ -269,6 +271,7 @@ async function mainEvent() {
             settingsSafariButton.classList.add("activeButton");
         }
         settingsPopUpContainer.classList.add("hidden");
+        settingsButton.classList.remove("disabled");
     })
 
     settingsSaveButton.addEventListener("click", (event) => {
@@ -303,6 +306,7 @@ async function mainEvent() {
         }
         // Hiding Settings Pop Up
         settingsPopUpContainer.classList.add("hidden");
+        settingsButton.classList.remove("disabled");
     })
 
     settingsChromeButton.addEventListener("click", (event) => {
