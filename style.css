@@ -418,9 +418,9 @@ html {
     }
 
     .settingsPopUpContainer {
-        width: 90vw;
-        margin-left: -2vw;
-        background-color: red;
+        width: 95vw;
+        margin-left: -1vw;
+        /*background-color: red;*/
     }
 
     .settingsPlayToNumbox {
@@ -429,6 +429,10 @@ html {
 
     .settingsTeamNameTextbox {
         width: 40vw;
+    }
+
+    .settingsLable {
+        font-size: large;
     }
 
     .winnerPopUpContainer {
